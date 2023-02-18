@@ -1,0 +1,82 @@
+
+<!--<table>-->
+<!--  <thead>-->
+<!--  <tr>-->
+<!--    <th>Doctor's Name</th>-->
+<!--    <th>Qualification</th>-->
+<!--    <th>Feild</th>-->
+<!--    <th>Time</th>-->
+
+<!--  </tr>-->
+<!--  </thead>-->
+<!--  <tbody>-->
+<!--  <tr th:each="doctor:${doctorlist}">-->
+<!--    <td th:text="${doctor.id}"></td>-->
+
+
+
+<!--    <td th:text="${doctor.fullname}"></td>-->
+<!--    <td th:text="${doctor.qualification}"></td>-->
+<!--    <td th:text="${doctor.feild}"></td>-->
+<!--    <td th:text="${doctor.time}"></td>-->
+
+
+<!--    <td>-->
+<!--      <a class="edit" th:href="@{~/doctor/edit/}+${doctor.id}">Edit</a>-->
+<!--      <a class="delete" th:href="@{~/doctor/delete/}+${doctor.id}">Delete</a>-->
+
+<!--    </td>-->
+<!--  </tr>-->
+<!--  </tbody>-->
+<!--</table>-->
+<table>
+  <thead>
+  <tr>
+    <th>patient full name</th>
+    <th>patient last name</th>
+    <th>email</th>
+    <th>number</th>
+    <th>date of birth</th>
+    <th>treatment</th>
+    <th>doctor</th>
+
+  </tr>
+  </thead>
+  <tbody>
+  <tr th:each="patient:${patientList}">
+    <td th:text="${patient.id}"></td>
+
+
+
+    <td th:text="${patient.fname}"></td>
+    <td th:text="${patient.lname}"></td>
+    <td th:text="${patient.email}"></td>
+    <td th:text="${patient.mobileNo}"></td>
+    <td th:text="${patient.dob}"></td>
+    <td th:text="${patient.doc}"></td>
+    <td th:text="${patient.treatment}"></td>
+
+
+    <!--            <td>-->
+    <!--                <a class="edit" th:href="@{~/edit/}+${doctor.id}">Edit</a>-->
+    <!--                <a class="delete" th:href="@{~/doctor/delete/}+${doctor.id}">Delete</a>-->
+
+    <!--            </td>-->
+  </tr>
+  </tbody>
+</table>
+
+
+<!--<form th:method="post" th:action="@{/save}" th:object="${doctor}">-->
+<!--  &lt;!&ndash;<div class="maindiv">&ndash;&gt;-->
+<!--  <input type="text" placeholder="id"  th:field="*{id}" th:value="${doctor.id}">-->
+<!--  <input type="text" placeholder="Enter doctor's qualification" th:field="*{qualification} " th:value="${doctor.qualification}">-->
+<!--  <input type="text" placeholder="Enter doctor's time" th:field="*{time}" th:value="${doctor.time}">-->
+<!--  <input type="text" placeholder="Enter doctor's fullname" th:field="*{fullname}" th:value="${doctor.fullname}">-->
+<!--  <input type="text"  placeholder="feild" th:field="*{feild}" th:value="${doctor.feild}">-->
+
+<!--  &lt;!&ndash;    <a href="#"><input type="submit" name="submit" value="create"></a>&ndash;&gt;-->
+<!--  <button type="submit">save user</button>-->
+
+<!--  &lt;!&ndash;</div>&ndash;&gt;-->
+<!--</form>-->

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../static/css/l.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+            href="https://fonts.googleapis.com/css2?family=Raleway:wght@500&display=swap"
+            rel="stylesheet"
+    />
+    <title>register</title>
+</head>
+<body>
+<div class="container">
+    <div class="form-container">
+
+<!--<div th:replace="layout/topbar.html :: topbar"></div>-->
+<!--<div th:replace="layout/sidebar.html :: sidebar"></div>-->
+
+
+<form th:method="post"
+      th:action="@{/user/create}"
+      th:object="${user}" enctype="multipart/form-data">
+    <h1>sign up</h1>
+
+    <input type="text" hidden th:field="*{id}" th:value="${user.id}">
+
+        <label>
+        <input label ="email" name="email" placeholder="email" type="text" th:field="*{email}" th:value="${user.email}"/>
+        <p th:if="${requestError!=null}"
+           th:text="${requestError['email']}"
+           class="text-danger"></p>
+            <br /></label>
+
+
+        <label>
+        <input label = "fullname" name="fullname" placeholder="fullname" type="text" th:field="*{fullname}" th:value="${user.fullname}"/>
+        <p th:if="${requestError!=null}"
+           th:text="${requestError['fullname']}"
+           class="text-danger"></p>
+
+            <br /></label>
+
+        <label>
+        <input  label="mobile" name="mobileno" placeholder="mobileno" type="text" th:field="*{mobile_no}" th:value="${user.mobile_no}"/>
+        <p th:if="${requestError!=null}"
+           th:text="${requestError['mobile_no']}"
+           class="text-danger"></p>
+        <br /></label>
+    <div>
+        <input type="file" name="image" accept="image/*" class="form-control-file">
+    </div>
+
+        <label>
+        <input  label =" password " name="password"  placeholder="password" type="password" th:field="*{password}" th:value="${user.password}"/>
+        <p th:if="${requestError!=null}"
+           th:text="${requestError['password']}"
+           class="text-danger"></p>
+
+            <br /></label>
+
+    <input type="submit" class="btn btn-primary">
+    <input type="reset" class="btn btn-danger">
+
+        <div class="registration-link">
+            <a th:href="@{/user/login}"> Have an account </a>
+        </div></form></div></div>
+    </div>
+</div>
+</body>
+</html>
+
+
