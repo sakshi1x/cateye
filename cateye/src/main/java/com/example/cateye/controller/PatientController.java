@@ -29,7 +29,7 @@ public class PatientController {
 
 //
 
-        return "doctor_list";
+        return "patient_list";
     }
 
 //    @GetMapping("/listt")

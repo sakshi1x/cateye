@@ -21,7 +21,7 @@ public class DoctorServiceImpl implements DoctorService {
             doctor.setId(doctorPojo.getId());
         }
 
-        doctor.setQualification( doctorPojo.getEmail());
+        doctor.setQualification( doctorPojo.getQualification());
         doctor.setFullname( doctorPojo.getFullname());
         doctor.setTime( doctorPojo.getTime());
         doctor.setFeild( doctorPojo.getFeild());

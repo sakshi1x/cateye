@@ -18,8 +18,7 @@ public class DoctorPojo{
 
     private Integer id;
 
-    @NotEmpty(message = "Email can't be empty")
-    private String email;
+
 
     @NotEmpty(message = "Full name can't be empty")
     private String fullname;

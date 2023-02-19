@@ -11,7 +11,7 @@
         background-color: #f1f1f1;
     }
 
-    #regForm {
+    regForm {
         background-color: #ffffff;
         margin: 100px auto;
         font-family: Raleway;
@@ -79,6 +79,27 @@
     /* Mark the steps that are finished and valid: */
     .step.finish {
         background-color: #04AA6D;
+    }
+    @media screen and (max-width: 768px) {
+        #regForm {
+            margin: 10% auto;
+            padding: 20px;
+            width: 80%;
+        }
+
+        input {
+            font-size: 16px;
+        }
+
+        button {
+            font-size: 16px;
+        }
+
+        .step {
+            height: 10px;
+            width: 10px;
+            margin: 0 1px;
+        }
     }
 </style>
 <body>
@@ -200,7 +221,7 @@
 <form th:action="@{/logout}" method="post" id="logoutForm">
     <button type="submit" form="logoutForm">Logout</button>
 </form>
-<a th:href="@{/user/doctor_input}">view doctor's list </a>
+<a th:href="@{/user/doctor_list}">view doctor's list </a>
 </body>
 </html>
 

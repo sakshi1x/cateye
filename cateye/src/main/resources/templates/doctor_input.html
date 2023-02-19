@@ -11,7 +11,7 @@
         background-color: #f1f1f1;
     }
 
-    #regForm {
+    regForm {
         background-color: #ffffff;
         margin: 100px auto;
         font-family: Raleway;
@@ -79,6 +79,27 @@
   {
         background-color: #04AA6D;
     }
+    @media screen and (max-width: 768px) {
+        regForm {
+            margin: 10% auto;
+            padding: 20px;
+            width: 80%;
+        }
+
+        input {
+            font-size: 16px;
+        }
+
+        button {
+            font-size: 16px;
+        }
+
+        .step {
+            height: 10px;
+            width: 10px;
+            margin: 0 1px;
+        }
+    }
 </style>
 <body>
 
@@ -86,13 +107,13 @@
     <h1>doctor info:</h1>
     <input type="text" hidden th:field="*{id}" th:value="${doctor.id}">
 
-    <p><input type="text" placeholder="First name..."  th:field="*{feild} " th:value="${doctor.feild}"></p>
-    <p><input type="text" placeholder="Last name..."  th:field="*{fullname} " th:value="${doctor.fullname}"></p>
+    <p><input type="text" placeholder="Feild."  th:field="*{feild} " th:value="${doctor.feild}"></p>
+    <p><input type="text" placeholder="fullname."  th:field="*{fullname} " th:value="${doctor.fullname}"></p>
 
-    <p><input type="text" placeholder="E-mail..."  th:field="*{qualification} " th:value="${doctor.qualification}"></p>
-    <p><input type="text" placeholder="Phone..."  th:field="*{time} " th:value="${doctor.time}"></p>
+    <p><input type="text" placeholder="qualification"  th:field="*{qualification} " th:value="${doctor.qualification}"></p>
+    <p><input type="text" placeholder="time.."  th:field="*{time} " th:value="${doctor.time}"></p>
 
-<!--    <button type="submit">save user</button>-->
+    <button type="submit">save user</button>
 
 </form>
 

@@ -57,25 +57,13 @@
 
 
 <div class="tab">
-    <button class="tablinks" onclick="openCity(event, 'London')" id="defaultOpen">Doctors</button>
+    <button class="tablinks" onclick="openCity(event, 'London')" id="defaultOpen">patient</button>
     <button class="tablinks" onclick="openCity(event, 'Paris')">Users</button>
-    <button class="tablinks" onclick="openCity(event, 'Tokyo')">Patient</button>
+    <button class="tablinks" onclick="openCity(event, 'Tokyo')">doctor</button>
 </div>
 
 <div id="London" class="tabcontent">
-<!--    <form th:method="post" th:action="@{/save}" th:object="${doctor}">-->
-<!--        &lt;!&ndash;<div class="maindiv">&ndash;&gt;-->
-<!--        <input type="text" placeholder="id"  th:field="*{id}" th:value="${doctor.id}">-->
-<!--        <input type="text" placeholder="Enter doctor's qualification" th:field="*{qualification} " th:value="${doctor.qualification}">-->
-<!--        <input type="text" placeholder="Enter doctor's time" th:field="*{time}" th:value="${doctor.time}">-->
-<!--        <input type="text" placeholder="Enter doctor's fullname" th:field="*{fullname}" th:value="${doctor.fullname}">-->
-<!--        <input type="text"  placeholder="feild" th:field="*{feild}" th:value="${doctor.feild}">-->
-
-<!--        &lt;!&ndash;    <a href="#"><input type="submit" name="submit" value="create"></a>&ndash;&gt;-->
-<!--        <button type="submit">save user</button>-->
-
-<!--        &lt;!&ndash;</div>&ndash;&gt;-->
-<!--    </form>-->
+     <a th:href="@{/listt}">About</a>
 </div>
 
 <div id="Paris" class="tabcontent">
@@ -112,40 +100,7 @@
 </div>
 
 <div id="Tokyo" class="tabcontent">
-
-    <table>
-        <thead>
-        <tr>
-            <th>patient full name</th>
-            <th>patient last name</th>
-            <th>email</th>
-            <th>number</th>
-            <th>date of birth</th>
-            <th>treatment</th>
-            <th>doctor</th>
-
-        </tr>
-        </thead>
-        <tbody>
-        <tr th:each="patient:${patientlist}">
-            <td th:text="${patient.id}"></td>
-
-
-
-            <td th:text="${patient.fname}"></td>
-            <td th:text="${patient.lname}"></td>
-            <td th:text="${patient.email}"></td>
-            <td th:text="${patient.mobileNo}"></td>
-            <td th:text="${patient.dob}"></td>
-            <td th:text="${patient.doc}"></td>
-            <td th:text="${patient.treatment}"></td>
-
-
-<!--            <td>-->
-<!--                <a class="edit" th:href="@{~/edit/}+${doctor.id}">Edit</a>-->
-<!--                <a class="delete" th:href="@{~/doctor/delete/}+${doctor.id}">Delete</a>-->
-
-<!--            </td>-->
+    <a th:href="@{/doc}">Home</a>
         </tr>
         </tbody>
     </table>

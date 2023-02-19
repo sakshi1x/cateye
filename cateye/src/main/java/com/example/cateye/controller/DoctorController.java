@@ -44,12 +44,12 @@ public class DoctorController {
 
 //
 
-        return "user_list";}
+        return "doctor_list";}
 
-    @GetMapping("/doctor_input")
+    @GetMapping("/doc")
     public String createUser(Model model
     ){
-        model.addAttribute("patient",new PatientPojo());
+        model.addAttribute("doctor",new DoctorPojo());
         return "doctor_input";
     }
 

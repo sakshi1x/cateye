@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<table>
+  <thead>
+  <tr>
+    <th>patient full name</th>
+    <th>patient last name</th>
+    <th>email</th>
+    <th>number</th>
+    <th>date of birth</th>
+    <th>treatment</th>
+    <th>doctor</th>
+
+  </tr>
+  </thead>
+  <tbody>
+  <tr th:each="patient:${patientList}">
+    <td th:text="${patient.id}"></td>
+
+
+
+    <td th:text="${patient.fname}"></td>
+    <td th:text="${patient.lname}"></td>
+    <td th:text="${patient.email}"></td>
+    <td th:text="${patient.mobileNo}"></td>
+    <td th:text="${patient.dob}"></td>
+    <td th:text="${patient.doc}"></td>
+    <td th:text="${patient.treatment}"></td>
+
+
+    <!--            <td>-->
+    <!--                <a class="edit" th:href="@{~/edit/}+${doctor.id}">Edit</a>-->
+    <!--                <a class="delete" th:href="@{~/doctor/delete/}+${doctor.id}">Delete</a>-->
+
+    <!--            </td>-->
+  </tr>
+  </tbody>
+</table>
+
+
+
+</body>
+</html>
